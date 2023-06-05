@@ -140,6 +140,7 @@ body {
 
   position: relative;
   padding-top: 80px;
+  padding-bottom: 40px;
   padding-left: 24px;
 }
 
@@ -215,7 +216,7 @@ body {
 
 .menu-tel {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.11;
 
   letter-spacing: 0.02em;
@@ -236,8 +237,7 @@ body {
 .mobile-social-list {
   display: flex;
   justify-content: start;
-  gap: 56px;
-  margin-bottom: 40px;
+  gap: 32px;
 }
 
 .social-item-link {
@@ -539,13 +539,14 @@ body {
 .social-list {
   display: flex;
   justify-content: center;
-}
-
-.social {
   gap: 24px;
 }
 
-.social-item-link {
+/* .social {
+  gap: 24px;
+} */
+
+/* .social-item-link {
   display: flex;
   width: 40px;
   height: 40px;
@@ -559,15 +560,11 @@ body {
   transition-timing-function: var(--timing-function);
 
   background-color: var(--accent-color);
-}
+} */
 
 .social-item-link:hover,
 .social-item-link:focus {
   background-color: var(--accent-focus-color);
-}
-
-.social-svg {
-  fill: var(--accent-white-color);
 }
 
 /*=========== SECTION 4 ===========*/
@@ -1129,9 +1126,8 @@ body {
   .hero-title {
     margin-bottom: 72px;
   }
-  .hero-section {
-    padding-top: 112px;
-    padding-bottom: 112px;
+  .hero {
+    padding: 112px 0;
   }
 
   .hero {
@@ -1198,21 +1194,22 @@ body {
     display: flex;
     justify-content: center;
   }
-
+  /*========= SUBSCRIBE ==========*/
   .container-subscribe {
     width: 100%;
   }
   .subscribe-form {
     flex-direction: column;
   }
+  .subscribe-label {
+    margin-bottom: 16px;
+  }
   .subscribe-label,
   .subscribe-input {
     width: 100%;
   }
-  .subscribe-input {
-    margin-bottom: 16px;
-  }
 
+  /*========= PORTFOLIO ==========*/
   .portfolio {
     padding: 48px 0;
   }
@@ -1231,7 +1228,6 @@ body {
   .portfolio-item:not(:last-child) {
     margin-bottom: 48px;
   }
-
   .image {
     width: 100%;
   }
@@ -1307,9 +1303,8 @@ body {
   }
 
   /*========= HERO ==========*/
-  .hero-section {
-    padding-top: 112px;
-    padding-bottom: 112px;
+  .hero {
+    padding: 112px 0;
   }
   .hero-title {
     margin-bottom: 36px;
@@ -1323,7 +1318,7 @@ body {
       url(../images/tablet@1x/people-office-tab@1x.jpg);
   }
 
-  /*========= SECTION  ==========*/
+  /*========= SECTION ==========*/
   .section {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -1355,8 +1350,7 @@ body {
     width: 584px;
   }
   .list-team {
-    row-gap: 64px;
-    gap: 24px;
+    gap: 64px 24px;
   }
 
   /*========= SECTION 4 ==========*/
@@ -1376,11 +1370,13 @@ body {
     width: 584px;
     gap: 72px 24px;
   }
+
+  /*========= SUBSCRIBE ==========*/
   .subscribe-form {
     width: 453px;
   }
 
-  /*  */
+  /*========= PORTFOLIO ==========*/
   .portfolio {
     padding: 64px 0 96px;
   }
@@ -1410,13 +1406,15 @@ body {
 /*========== DESKTOP ==========*/
 
 @media screen and (min-width: 1158px) {
-  .header {
-    padding: 24px 0;
-  }
   .container {
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  /*========= HEADER ==========*/
+  .header {
+    padding: 24px 0;
   }
   .logo {
     padding-right: 76px;
@@ -1434,43 +1432,58 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
-  .hero-section {
-    padding: 188px 0;
-  }
-  .hero-title {
-    font-size: 56px;
-  }
-  .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
+
+  /*========= HERO ==========*/
   .hero {
+    padding: 188px 0;
+
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/desktop@1x/people-office-desk@1x.jpg);
   }
+  .hero-title {
+    font-size: 56px;
+  }
+
+  /*========= SECTION ==========*/
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  /*========= SECTION 1 ==========*/
   .features-text {
     font-weight: 400;
   }
+
+  /*========= SECTION 2 ==========*/
   .product {
     display: flex;
     gap: 24px;
   }
+
+  /*========= SECTION 3 ==========*/
   .list-team {
     flex-wrap: nowrap;
     gap: 24px;
   }
+
+  /*========= SECTION 4 ==========*/
   .client-link {
     width: 168px;
   }
+
+  /*========= FOOTER ==========*/
   .container-footer-logo {
     margin-right: 120px;
   }
   .container-social {
     margin-right: 80px;
   }
+
+  /*========= SUBSCRIBE ==========*/
   .subscribe-label {
     margin-right: 24px;
   }
@@ -1478,6 +1491,7 @@ body {
     flex-wrap: nowrap;
   }
 
+  /*========= PORTFOLIO ==========*/
   .list-button {
     justify-content: center;
     margin-bottom: 72px;
