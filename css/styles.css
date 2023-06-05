@@ -348,11 +348,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  /* margin-bottom: 48px; */
   max-width: 496px;
 
   font-weight: 700;
-  font-size: 36px;
+  font-size: 56px;
   letter-spacing: 0.02em;
   line-height: 1.07;
 
@@ -501,7 +500,6 @@ body {
 }
 
 .team-item {
-  flex-basis: calc((100%-72px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -542,31 +540,6 @@ body {
   gap: 24px;
 }
 
-/* .social {
-  gap: 24px;
-} */
-
-/* .social-item-link {
-  display: flex;
-  width: 40px;
-  height: 40px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  cursor: pointer;
-
-  transition-property: background-color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
-
-  background-color: var(--accent-color);
-} */
-
-.social-item-link:hover,
-.social-item-link:focus {
-  background-color: var(--accent-focus-color);
-}
-
 /*=========== SECTION 4 ===========*/
 
 .client {
@@ -605,8 +578,6 @@ body {
 /*=========== FOOTER LOGO ===========*/
 
 .footer {
-  /* padding: 100px 0; */
-
   background-color: var(--title-text-color);
 }
 
@@ -1105,6 +1076,14 @@ body {
 
 /*========== MEDIA ==========*/
 
+/*========== MODAL ==========*/
+@media screen and (max-width: 428px) {
+  .modal {
+    width: 320px;
+    height: auto;
+  }
+}
+
 /*========== MOBILE ==========*/
 @media screen and (max-width: 767px) {
   .container {
@@ -1125,12 +1104,12 @@ body {
   /*========= HERO ==========*/
   .hero-title {
     margin-bottom: 72px;
+
+    font-size: 36px;
   }
   .hero {
     padding: 112px 0;
-  }
 
-  .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1194,6 +1173,7 @@ body {
     display: flex;
     justify-content: center;
   }
+
   /*========= SUBSCRIBE ==========*/
   .container-subscribe {
     width: 100%;
@@ -1227,9 +1207,6 @@ body {
   }
   .portfolio-item:not(:last-child) {
     margin-bottom: 48px;
-  }
-  .image {
-    width: 100%;
   }
 }
 
@@ -1276,8 +1253,8 @@ body {
   .container-footer {
     flex-wrap: wrap;
   }
-  .subscribe-form {
-    column-gap: 24px;
+  .subscribe-label {
+    margin-right: 24px;
   }
   .list-button {
     justify-content: center;
@@ -1293,9 +1270,6 @@ body {
   .header {
     padding: 16px 0;
   }
-  .logo {
-    margin-right: 120px;
-  }
   .adress-nav {
     display: flex;
     flex-direction: column;
@@ -1303,14 +1277,15 @@ body {
   }
 
   /*========= HERO ==========*/
-  .hero {
-    padding: 112px 0;
+  .logo-heder {
+    margin-right: 76px;
   }
   .hero-title {
     margin-bottom: 36px;
-    font-size: 56px;
   }
   .hero {
+    padding: 112px 0;
+
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1386,9 +1361,6 @@ body {
   .portfolio-list {
     row-gap: 48px;
   }
-  .image {
-    width: 356px;
-  }
 }
 
 @media screen and(min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -1416,8 +1388,8 @@ body {
   .header {
     padding: 24px 0;
   }
-  .logo {
-    padding-right: 76px;
+  .logo-heder {
+    margin-right: 76px;
   }
   .nav-address {
     margin-left: auto;
@@ -1444,13 +1416,16 @@ body {
       url(../images/desktop@1x/people-office-desk@1x.jpg);
   }
   .hero-title {
-    font-size: 56px;
+    margin-bottom: 48px;
   }
 
   /*========= SECTION ==========*/
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
+  }
+  .aboutus {
+    padding-top: 0;
   }
 
   /*========= SECTION 1 ==========*/
@@ -1482,6 +1457,9 @@ body {
   .container-social {
     margin-right: 80px;
   }
+  .footer {
+    padding: 100px 0;
+  }
 
   /*========= SUBSCRIBE ==========*/
   .subscribe-label {
@@ -1512,5 +1490,3 @@ body {
       url(../images/desktop@2x/people-office-desk@2x.jpg);
   }
 }
-
-/* НЕЗАБУДЬ ОПТИМИЗИРОВАТЬ svg */
